@@ -72,3 +72,4 @@ If this is not specified, the script will use option 1 by default.
 * Alignment_length: alignment length of the blast hit
 * Query_coverage: query coverage of the blast hit
 * Hit_length: length of the hit in the database
+
