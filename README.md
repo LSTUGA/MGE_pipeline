@@ -24,7 +24,7 @@ $ sudo -H pip install phigaro
 # install all the required dependencies and Perl modules
 $ git clone https://github.com/jaumlrc/ProphET.git
 $ cd ProphET
-# Change download parameters in the file: /user/path/to/ProphET/UTILS.dir/fetch_genomes_based_on_taxid.pl
+# Change download parameters in the script: /user/path/to/ProphET/UTILS.dir/fetch_genomes_based_on_taxid.pl
   my $DOWNLOAD_INCREMENTS = 200;
 $ ./INSTALL.pl
 # Add ProphET to ~/.bashrc
@@ -71,4 +71,4 @@ Blast_hit: blast hit in the database \
 Hit_identity: identical percentage of the blast hit \
 Alignment_length: alignment length of the blast hit \
 Query_coverage: query coverage of the blast hit \
-Hit_length: length of the hit in the database \
+Hit_length: length of the hit in the database
