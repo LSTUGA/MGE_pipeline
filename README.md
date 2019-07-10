@@ -3,14 +3,16 @@ This is a pipeline for the detection of mobile genetic elements (MGEs) from comp
 
 # Dependencies and installation instructions
 1. Python 2.7 and Python 3.4
-2. NCBI [BLAST](ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/) 2.7.1+
+2. NCBI [BLAST](ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+) 2.7.1+
 3. [seqtk](https://github.com/lh3/seqtk) 1.3-r106
 4. [Prokka](https://github.com/tseemann/prokka) 1.12
 5. [MOB-suite](https://github.com/phac-nml/mob-suite) 1.4.9 (dependencies: blast, circlator, mash)
-    make sure you install all the required dependencies
+```
+    # make sure you install all the required dependencies
     $ pip3 install circlator (dependencies: BWA, prodigal, SAMtools, MUMmer, Canu/SPAdes)
     $ pip3 install mob_suite
     $ mob_init
+```
 6. [Phigaro](https://github.com/lpenguin/phigaro) 0.1.5.0 (dependencies: MetaGeneMark, HMMER, locate)
     make sure you install all the required dependencies
     $ sudo -H pip install phigaro
