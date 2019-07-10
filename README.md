@@ -60,7 +60,7 @@ If this is not specified, the script will use option 1 by default.
 
 # Output description
 
-| Contig_ID | contig ID of the genome assembly |
+Contig_ID: contig ID of the genome assembly \
 Start_pos: start position of the detected MGE \
 End_pos: end position of the detected MGE \
 MGE_length: length of the detected MGE \
