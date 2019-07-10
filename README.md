@@ -3,19 +3,19 @@ This is a pipeline for the detection of mobile genetic elements (MGEs) from comp
 
 # Dependencies and installation instructions
 Python 2.7 and Python 3.4
-[NCBI BLAST](ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/) v2.7.1+
-seqtk 1.3-r106
-Prokka 1.12
-MOB-suite 1.4.9 (dependencies: blast, circlator, mash)
+NCBI [BLAST](ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/) 2.7.1+
+[seqtk](https://github.com/lh3/seqtk) 1.3-r106
+[Prokka](https://github.com/tseemann/prokka) 1.12
+[MOB-suite](https://github.com/phac-nml/mob-suite) 1.4.9 (dependencies: blast, circlator, mash)
     make sure you install all the required dependencies
     $ pip3 install circlator (dependencies: BWA, prodigal, SAMtools, MUMmer, Canu/SPAdes)
     $ pip3 install mob_suite
     $ mob_init
-Phigaro 0.1.5.0 (dependencies: MetaGeneMark, HMMER, locate)
+[Phigaro](https://github.com/lpenguin/phigaro) 0.1.5.0 (dependencies: MetaGeneMark, HMMER, locate)
     make sure you install all the required dependencies
     $ sudo -H pip install phigaro
     please create and modify the configuration file ~/.phigaro/config.yml according to Phigaro's instruction.
-ProphET 0.5.1 (dependencies: EMBOSS, BEDTools, BLAST, Perl modules)
+[ProphET](https://github.com/facebook/prophet) 0.5.1 (dependencies: EMBOSS, BEDTools, BLAST, Perl modules)
     make sure you install all the required dependencies and Perl modules
     $ git clone https://github.com/jaumlrc/ProphET.git
     $ cd ProphET
