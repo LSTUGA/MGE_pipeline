@@ -60,15 +60,15 @@ If this is not specified, the script will use option 1 by default.
 
 # Output description
 ### Output file: *_MGE_results.txt
-Contig_ID: contig ID of the genome assembly \
-Start_pos: start position of the detected MGE \
-End_pos: end position of the detected MGE \
-MGE_length: length of the detected MGE \
-MGE_type: type of MGE \
-Method: method used for MGE detection \
-Database: database used for MGE verification \
-Blast_hit: blast hit in the database \
-Hit_identity: identical percentage of the blast hit \
-Alignment_length: alignment length of the blast hit \
-Query_coverage: query coverage of the blast hit \
-Hit_length: length of the hit in the database
+* Contig_ID: contig ID of the genome assembly
+* Start_pos: start position of the detected MGE
+* End_pos: end position of the detected MGE
+* MGE_length: length of the detected MGE
+* MGE_type: type of MGE
+* Method: method used for MGE detection
+* Database: database used for MGE verification
+* Blast_hit: blast hit in the database
+* Hit_identity: identical percentage of the blast hit
+* Alignment_length: alignment length of the blast hit
+* Query_coverage: query coverage of the blast hit
+* Hit_length: length of the hit in the database
