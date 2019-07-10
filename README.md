@@ -59,7 +59,7 @@ Specify your own database for either prophages or plasmids using --db_prophage o
 If this is not specified, the script will use option 1 by default.
 
 # Output description
-
+### Output file: *_MGE_results.txt
 Contig_ID: contig ID of the genome assembly \
 Start_pos: start position of the detected MGE \
 End_pos: end position of the detected MGE \
