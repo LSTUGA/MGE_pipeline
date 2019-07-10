@@ -1,7 +1,9 @@
-#Introduction
+# Introduction
 This is a pipeline for the detection of mobile genetic elements (MGEs) from complete genomes or genome assemblies. The types of detected MGEs include prophage and plasmid. This pipeline integrates two tools (i.e, ProphET and Phigaro) for the detection of prophage and one tool (i.e., MOB-suite) for the detection of plasmid.
 
-#Dependencies and installation instructions
+# Dependencies and installation instructions
+Python 2.7 and Python 3.4
+[NCBI BLAST](ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/) v2.7.1+
 seqtk 1.3-r106
 Prokka 1.12
 MOB-suite 1.4.9 (dependencies: blast, circlator, mash)
@@ -26,7 +28,7 @@ ProphET 0.5.1 (dependencies: EMBOSS, BEDTools, BLAST, Perl modules)
       export PERL5LIB=$PERL5LIB:/home/shaoting/tools/ProphET/UTILS.dir/GFFLib
       export PATH=$PATH:/home/shaoting/tools/ProphET/UTILS.dir/GFFLib
 
-#Usage
+# Usage
 mge_pipeline.py -i <assembly_path> -o <output_path> -t <threads> -c <minimum_coverage> -p <minimum_ident>
 -i: path to input assembly
 -o: path to output directory
@@ -37,7 +39,7 @@ mge_pipeline.py -i <assembly_path> -o <output_path> -t <threads> -c <minimum_cov
 --db_plasmid: path to plasmid database
 --check: use '--check' flag to check the required dependencies
 
-#Database
+# Database
 Option 1
 Default database for prophages: http://phaster.ca/downloads/z_DNA_fragment_DB.gz
 Download and uncompress this database, put it into the folder /user/path/to/mge_pipeline/database, and then rename it as "PHASTER_prophage_database.fna"
@@ -47,7 +49,7 @@ Download and uncompress this database, put it into the folder /user/path/to/mge_
 Option 2
 Specify your own database for either prophages or plasmids using --db_prophage or --db_plasmid. The database should be in fasta format.
 
-#Output description
+# Output description
 Contig_ID: contig ID of the genome assembly
 Start_pos: start position of the detected MGE
 End_pos: end position of the detected MGE
