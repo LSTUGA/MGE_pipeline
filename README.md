@@ -47,18 +47,20 @@ mge_pipeline.py -i <assembly_path> -o <output_path> -t <threads> -c <minimum_cov
 ```
 
 # Database
-**Option 1** \
+### Option 1
 Default database for prophages: http://phaster.ca/downloads/z_DNA_fragment_DB.gz \
 Download and uncompress this database, put it into the folder /user/path/to/mge_pipeline/database, and then rename it as "PHASTER_prophage_database.fna" \
 \
 Default database for plasmids: ftp://ftp.ncbi.nih.gov/refseq/release/plasmid \
 Download and uncompress this database, put it into the folder /user/path/to/mge_pipeline/database, and then rename it as "Refseq_plasmid_database.fna"
 
-**Option 2** \
-Specify your own database for either prophages or plasmids using --db_prophage or --db_plasmid. The database should be in fasta format.
+### Option 2
+Specify your own database for either prophages or plasmids using --db_prophage or --db_plasmid. The database should be in fasta format.\
+If this is not specified, the script will use option 1 by default.
 
 # Output description
-Contig_ID: contig ID of the genome assembly \
+
+| Contig_ID | contig ID of the genome assembly |
 Start_pos: start position of the detected MGE \
 End_pos: end position of the detected MGE \
 MGE_length: length of the detected MGE \
