@@ -8,20 +8,20 @@ This is a pipeline for the detection of mobile genetic elements (MGEs) from comp
 4. [Prokka](https://github.com/tseemann/prokka) 1.12
 5. [MOB-suite](https://github.com/phac-nml/mob-suite) 1.4.9 (dependencies: blast, circlator, mash)
 ```
-# make sure you install all the required dependencies
+# install all the required dependencies
 $ pip3 install circlator #(dependencies: BWA, prodigal, SAMtools, MUMmer, Canu/SPAdes)
 $ pip3 install mob_suite
 $ mob_init
 ```
 6. [Phigaro](https://github.com/lpenguin/phigaro) 0.1.5.0 (dependencies: MetaGeneMark, HMMER, locate)
 ```
-# make sure you install all the required dependencies
+# install all the required dependencies
 $ sudo -H pip install phigaro
 # please create and modify the configuration file ~/.phigaro/config.yml according to Phigaro's instruction.
 ```
 7. [ProphET](https://github.com/facebook/prophet) 0.5.1 (dependencies: EMBOSS, BEDTools, BLAST, Perl modules)
 ```
-# make sure you install all the required dependencies and Perl modules
+# install all the required dependencies and Perl modules
 $ git clone https://github.com/jaumlrc/ProphET.git
 $ cd ProphET
 # Change download parameters in the file: /user/path/to/ProphET/UTILS.dir/fetch_genomes_based_on_taxid.pl
@@ -34,6 +34,7 @@ $ ./INSTALL.pl
   export PATH=$PATH:/home/shaoting/tools/ProphET/UTILS.dir/GFFLib
 ```
 # Usage
+```
 mge_pipeline.py -i <assembly_path> -o <output_path> -t <threads> -c <minimum_coverage> -p <minimum_ident>
 -i: path to input assembly
 -o: path to output directory
@@ -43,6 +44,7 @@ mge_pipeline.py -i <assembly_path> -o <output_path> -t <threads> -c <minimum_cov
 --db_prophage: path to prophage database
 --db_plasmid: path to plasmid database
 --check: use '--check' flag to check the required dependencies
+```
 
 # Database
 Option 1
