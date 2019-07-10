@@ -9,3 +9,4 @@ Download and uncompress this database, put it into the folder /user/path/to/mge_
 Option 2
 Specify your own database for either prophages or plasmids using --db_prophage or --db_plasmid. The database should be in fasta format.
 If this is not specified, the script will use option 1 by default.
+
