@@ -76,8 +76,19 @@ def prophet(filename,prokka_fna,prokka_gff):
 
 # Function for prophage detection using Phigaro.
 def phigaro(filename,prokka_fna,threads,phigaro_contig):
+  fasta_tmp=prokka_fna+'.tmp'
+  sequences_to_delete = []
+  records_to_save = []
+  for record in SeqIO.parse(prokka_fna, "fasta"):
+    if len(record) < 20000:
+      sequences_to_delete.append(record.id)
+    else:
+      records_to_save.append(record)
+  print('These sequencess are shorter than 20000 bp. Phigaro is running without them.')
+  print('\n'.join(sequences_to_delete))
+  SeqIO.write(records_to_save, fasta_tmp, "fasta")
   phigaro_out=filename+'_phigaro.txt'
-  subprocess.check_call('phigaro -f '+prokka_fna+' -t '+threads+' -c '+phigaro_contig+' -o '+phigaro_out+' >> '+log_file+' 2>&1',shell=True)
+  subprocess.check_call('phigaro --not-open -e txt -f '+fasta_tmp+' -t '+threads+' -o '+phigaro_out+' >> '+log_file+' 2>&1',shell=True)
 
 # Function for plasmid dection using MOB-suite.
 def mobsuite(filename,prokka_fna,threads):
@@ -200,7 +211,7 @@ def main():
   subprocess.check_call('(head -n 1 '+output_file+'.tmp'+' && tail -n +2 '+output_file+'.tmp'+' | sort -V) > '+output_file,shell=True)
   subprocess.check_call('rm *tmp error.log',shell=True)
   subprocess.check_call('rm *_prokka.fna *_prokka.gff *_prophet.gff',shell=True)
-  subprocess.check_call('rm -r proc *_prokka',shell=True)
+  subprocess.check_call('rm -r *_prokka',shell=True)
   print 'Done.'
 
 if __name__ == '__main__':
