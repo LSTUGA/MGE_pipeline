@@ -2,7 +2,7 @@
 This is a pipeline for the detection of mobile genetic elements (MGEs) from complete genomes or genome assemblies. The types of detected MGEs include prophage and plasmid. This pipeline integrates two tools (i.e, ProphET and Phigaro) for the detection of prophage and one tool (i.e., MOB-suite) for the detection of plasmid.
 
 # Dependencies and installation instructions
-1. Python 2.7 and Python 3.4
+1. Python 2.7 and Python 3.6
 2. NCBI [BLAST](ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+) 2.7.1+
 3. [seqtk](https://github.com/lh3/seqtk) 1.3-r106
 4. [Prokka](https://github.com/tseemann/prokka) 1.12
