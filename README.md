@@ -13,11 +13,11 @@ $ pip3 install circlator #(dependencies: BWA, prodigal, SAMtools, MUMmer, Canu/S
 $ pip3 install mob_suite
 $ mob_init
 ```
-6. [Phigaro](https://github.com/lpenguin/phigaro) 0.1.5.0 (dependencies: MetaGeneMark, HMMER, locate)
+6. [Phigaro](https://github.com/bobeobibo/phigaro) 0.2.1.8 (dependencies: Prodigal, HMMER, locate)
 ```
 # install all the required dependencies
-$ sudo -H pip install phigaro
-# please create and modify the configuration file ~/.phigaro/config.yml according to Phigaro's instruction.
+$ sudo -H pip3 install phigaro (Error occurred during installation... I've reported this issue on its Github page.)
+$ phigaro-setup
 ```
 7. [ProphET](https://github.com/facebook/prophet) 0.5.1 (dependencies: EMBOSS, BEDTools, BLAST, Perl modules)
 ```
