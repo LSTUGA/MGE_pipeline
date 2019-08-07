@@ -16,7 +16,7 @@ $ mob_init
 6. [Phigaro](https://github.com/bobeobibo/phigaro) 0.2.1.8 (dependencies: Prodigal, HMMER, locate)
 ```
 # install all the required dependencies
-$ sudo -H pip3 install phigaro (Error occurred during installation... I've reported this issue on its Github page.)
+$ sudo -H pip3 install phigaro #Error occurred during installation... I've reported this issue on its Github page.
 $ phigaro-setup
 ```
 7. [ProphET](https://github.com/facebook/prophet) 0.5.1 (dependencies: EMBOSS, BEDTools, BLAST, Perl modules)
