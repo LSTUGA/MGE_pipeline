@@ -18,6 +18,8 @@ $ mob_init
 # install all the required dependencies
 $ sudo -H pip3 install phigaro
 # Error occurred during installation... I've reported this issue on its Github page.
+# Alternatively, you can download the package using "git clone" and install it manually. 
+# I used the following command and it worked successfully. $ sudo python3.6 setup.py install
 $ phigaro-setup
 ```
 7. [ProphET](https://github.com/facebook/prophet) 0.5.1 (dependencies: EMBOSS, BEDTools, BLAST, Perl modules)
