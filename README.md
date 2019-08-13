@@ -18,6 +18,7 @@ $ mob_init
 # install all the required dependencies
 $ sudo -H pip3 install phigaro
 # Error occurred during installation... I've reported this issue on its Github page.
+# The error has been fixed by the authors. Please refer to the issue https://github.com/bobeobibo/phigaro/issues/8#issuecomment-520769786.
 # Alternatively, you can download the package using "git clone" and install it manually. 
 # I used the following command and it worked successfully. $ sudo python3.6 setup.py install
 $ phigaro-setup
