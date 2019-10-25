@@ -48,6 +48,7 @@ mge_pipeline.py -i <assembly_path> -o <output_path> -t <threads> -c <minimum_cov
 --db_prophage: path to prophage database
 --db_plasmid: path to plasmid database
 --check: use '--check' flag to check the required dependencies
+--rename: use '--rename' flag to rename the contigs before running MGE detection
 ```
 
 # Database
