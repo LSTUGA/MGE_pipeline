@@ -25,6 +25,7 @@ def parse_args():
   parser.add_argument("--db_prophage",type=os.path.abspath,help="<string>: path to prophage database")
   parser.add_argument("--db_plasmid",type=os.path.abspath,help="<string>: path to plasmid database")
   parser.add_argument("--check",action="store_true",help="<flag>: use '--check' flag to check the required dependencies")
+  parser.add_argument("--rename",action="store_true",help="<flag>: use '--rename' flag to rename the contigs before running MGE detection")
   return parser.parse_args()
 
 # check dependencies
@@ -59,8 +60,12 @@ else:
 
 # Function for genome annotation using PROKKA.
 def prokka(input_path,filestr,filename,output_path,threads,prokka_fna,prokka_gff):
-  ## Rename contigs.
-  subprocess.check_call('seqtk rename '+input_path+' '+filename+'_ > '+filestr,shell=True)
+  rename_contigs = parse_args().rename
+  if rename_contigs:
+    ## Rename contigs.
+    subprocess.check_call('seqtk rename '+input_path+' '+filename+'_ > '+filestr,shell=True)
+  else:
+    subprocess.check_call('cp '+input_path+' '+filestr,shell=True)
   subprocess.check_call('prokka --mincontiglen 1 --force --kingdom Bacteria --addgenes --prefix '+filename+' --outdir '+filename+'_prokka --cpus '+threads+' '+filestr+' >> '+log_file+' 2>&1',shell=True)
   subprocess.check_call('cp '+filename+'_prokka/'+filename+'.fna '+prokka_fna,shell=True)
   subprocess.check_call('cp '+filename+'_prokka/'+filename+'.gff '+prokka_gff,shell=True)
@@ -110,7 +115,7 @@ def extract_seq(fasta_file,contig_id,beg,end):
 # Function for Blastn.
 def blastn(blast_cmd,query,db,blastout,threads,max_hsps,max_target_seqs,perc_qcov,perc_ident):
   evalue=1e-5
-  blast_fmt = "'6 qseqid stitle pident length qcovhsp qlen slen qstart qend sstart send evalue bitscore'"
+  blast_fmt = "6 qseqid stitle pident length qcovhsp qlen slen qstart qend sstart send evalue bitscore"
   if db=='Prophage':
     blast_db=db_prophage
     blast_database='PHASTER'
