@@ -2,7 +2,7 @@
 This is a pipeline for the detection of mobile genetic elements (MGEs) from complete genomes or genome assemblies. The types of detected MGEs include prophage and plasmid. This pipeline integrates two tools (i.e, ProphET and Phigaro) for the detection of prophage and one tool (i.e., MOB-suite) for the detection of plasmid.
 
 # Dependencies and installation instructions
-1. Python 2.7 and Python 3.4
+1. Python 2.7 and Python 3.6
 2. NCBI [BLAST](ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+) 2.7.1+
 3. [seqtk](https://github.com/lh3/seqtk) 1.3-r106
 4. [Prokka](https://github.com/tseemann/prokka) 1.12
@@ -16,7 +16,11 @@ $ mob_init
 6. [Phigaro](https://github.com/bobeobibo/phigaro) 0.2.1.8 (dependencies: Prodigal, HMMER, locate)
 ```
 # install all the required dependencies
-$ sudo -H pip3 install phigaro #Error occurred during installation... I've reported this issue on its Github page.
+$ sudo -H pip3 install phigaro
+# Error occurred during installation... I've reported this issue on its Github page.
+# The error has been fixed by the authors. Please refer to the issue https://github.com/bobeobibo/phigaro/issues/8#issuecomment-520769786.
+# Alternatively, you can download the package using "git clone" and install it manually. 
+# I used the following command and it worked successfully. $ sudo python3.6 setup.py install
 $ phigaro-setup
 ```
 7. [ProphET](https://github.com/facebook/prophet) 0.5.1 (dependencies: EMBOSS, BEDTools, BLAST, Perl modules)
