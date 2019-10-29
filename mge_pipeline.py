@@ -115,7 +115,7 @@ def extract_seq(fasta_file,contig_id,beg,end):
 # Function for Blastn.
 def blastn(blast_cmd,query,db,blastout,threads,max_hsps,max_target_seqs,perc_qcov,perc_ident):
   evalue=1e-5
-  blast_fmt = "6 qseqid stitle pident length qcovhsp qlen slen qstart qend sstart send evalue bitscore"
+  blast_fmt = "'6 qseqid stitle pident length qcovhsp qlen slen qstart qend sstart send evalue bitscore'"
   if db=='Prophage':
     blast_db=db_prophage
     blast_database='PHASTER'
